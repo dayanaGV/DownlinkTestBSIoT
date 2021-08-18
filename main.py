@@ -20,7 +20,7 @@ def listToString(s):
 
 headers = {
 'Content-Type': 'application/json',
-'Authorization': 'Bearer vn4EQAAAAA11czEubG9yaW90Lmlv9dJ7q1wbS12IQF3ClhvSsA==',
+'Authorization': 'Bearer +token',
 }
 
 #El mensaje de prueba ser "hola" más un contador
@@ -30,7 +30,7 @@ for i in range(2):
     print(count)
     lista=  print_string_hex(str(count))
     mensaje= "686f6c61" + listToString(lista)
-    data = '{"cmd": "tx", "EUI": "BE7A000000000556", "port": 35, "confirmed": false, "data": "'+mensaje+'", "appid": "BE7E0440"}'
+    data = '{"cmd": "tx", "EUI": "#####", "port": 35, "confirmed": false, "data": "'+mensaje+'", "appid": "####"}'
     response = requests.post('https://us1.loriot.io/1/rest', headers=headers, data=data)
     count+=1
     time.sleep(15)
